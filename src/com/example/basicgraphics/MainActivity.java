@@ -18,10 +18,16 @@ public class MainActivity extends Activity {
 		shapes = new BView(this);
 		setContentView(shapes);
 		
+	}
 		private class BView extends View {
 			public BView(Context mcontext) {
 				super(mcontext);
-			}
+	
+			}	
+			@Override
+			protected void onDraw(Canvas canvas) {
+				super.onDraw(canvas);
+	 
 	}
 	
 	
