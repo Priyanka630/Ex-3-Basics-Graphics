@@ -10,7 +10,14 @@ import android.view.Menu;
 import android.view.View;
 
 public class MainActivity extends Activity {
-
+ 
+	View shapes;
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		shapes = new View(this);
+		setContentView(shapes);
+	}
 	
 	
 	
