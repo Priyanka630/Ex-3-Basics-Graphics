@@ -11,12 +11,17 @@ import android.view.View;
 
 public class MainActivity extends Activity {
  
-	View shapes;
+	BView shapes;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		shapes = new View(this);
+		shapes = new BView(this);
 		setContentView(shapes);
+		
+		private class BView extends View {
+			public BView(Context mcontext) {
+				super(mcontext);
+			}
 	}
 	
 	
