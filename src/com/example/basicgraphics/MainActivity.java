@@ -30,11 +30,29 @@ public class MainActivity extends Activity {
 				
 				Paint paint = new Paint();
 				paint.setStyle(Paint.Style.FILL);
+				
+				paint.setColor(Color.RED);
+				canvas.drawPaint(paint);
+				
+				paint.setAntiAlias(false);
+				paint.setColor(Color.BLUE);
+				canvas.drawCircle(25, 25, 20, paint);
+				
+				paint.setAntiAlias(true);
+				paint.setColor(Color.BLACK);
+				canvas.drawCircle(60, 25, 20, paint);
+				
+				paint.setAntiAlias(false);
+				paint.setColor(Color.GRAY);
+				canvas.drawRect(100, 5, 200, 30, paint);
+				
+				canvas.rotate(-40);
+				
+				paint.setStyle(Paint.Style.FILL);
+				canvas.drawText("Graphics Rotation", 45, 185, paint);
 	 
-	}
-	
-	
-	
-	
-	
+				// undo the rotate
+				canvas.restore();
+			}
+		}	
 }
